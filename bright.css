@@ -3,18 +3,21 @@
     background color: aliceblue;
 
 h1 {
-color: black
+color: black;
 text-align: center;
-text-decoration: :double
-
-
+text-decoration: :double;
 
 }
 
 p{
 
-font: 300
-font-size:large
-font-family:x-large
+font: 300;
+font-size:large;
+font-family:x-large;
 }
+
+h2: {
+color: yellow;
+text-alignment: center;
+text-decoration: double;
 }
