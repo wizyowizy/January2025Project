@@ -2,9 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('test') {
+        stage('Test' stage 1) {
             steps {
-                echo 'Hello World'
+                 sh 'cd MyWebApp and test
+            }
+        }
+        stage('compile the java code' stage 2) {
+            steps {
+                sh 'cd MyWebApp && mvn clean package'
+            }
+    
+        }
+        stage('Deploy to Tomcat' stage 3) {
+            steps {
+                deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://http://http://18.217.141.19:8080///')], contextPath: 'path', war: '**/*.war'
             }
         }
     }
